@@ -17,6 +17,7 @@
 		<module>01-minimal</module>
 		<module>02-testable</module>
 		<module>02-testable-tests</module>
+		<module>03-console</module>
 	</modules>
 
 	<build>
