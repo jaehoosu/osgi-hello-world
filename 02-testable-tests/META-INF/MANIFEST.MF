@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: osgi-hello-world-02-testable-tests
+Bundle-Version: 0.0.1.qualifier
+Fragment-Host: osgi-hello-world-02-testable
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.junit;bundle-version="[4.0.0,5.0.0)"
