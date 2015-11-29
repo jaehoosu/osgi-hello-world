@@ -20,6 +20,7 @@
 		<module>03-console</module>
 		<module>04-ds</module>
 		<module>05-ds-annotations</module>
+		<module>06-servlet</module>
 	</modules>
 
 	<build>
