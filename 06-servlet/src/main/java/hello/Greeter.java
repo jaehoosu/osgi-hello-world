@@ -6,7 +6,7 @@ import javax.ws.rs.Path;
 import org.osgi.service.component.annotations.Component;
 
 @Path("/greeter")
-@Component(immediate = true, service = Object.class)
+@Component(service = Object.class)
 public class Greeter {
 
 	@GET
