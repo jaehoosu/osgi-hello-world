@@ -21,6 +21,7 @@
 		<module>04-ds</module>
 		<module>05-ds-annotations</module>
 		<module>06-servlet</module>
+		<module>07-servlet-webconsole</module>
 	</modules>
 
 	<build>
@@ -36,6 +37,7 @@
 					<artifactId>target-platform-configuration</artifactId>
 					<version>${tycho-version}</version>
 					<configuration>
+						<pomDependencies>consider</pomDependencies>
 						<target>
 							<artifact>
 								<groupId>pl.pilabs.osgi-hello-world</groupId>
