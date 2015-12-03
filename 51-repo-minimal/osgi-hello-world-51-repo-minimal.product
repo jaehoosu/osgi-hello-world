@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="test" uid="test" application="org.eclipse.ui.ide.workbench" version="0.0.1.qualifier" useFeatures="false" includeLaunchers="false">
+
+   <configIni use="default">
+      <win32>/osgi-hello-world-51-war-minimal/src/main/webapp/WEB-INF/eclipse/configuration/config.ini</win32>
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-clean
+      </programArgs>
+      <vmArgs>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.osgi.service.http.port=9090 -Dorg.eclipse.equinox.http.jetty.log.stderr.threshold=info
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <launcher>
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
+   <plugins>
+      <plugin id="com.eclipsesource.jaxrs.jersey-all"/>
+      <plugin id="com.eclipsesource.jaxrs.publisher"/>
+      <plugin id="org.apache.commons.fileupload"/>
+      <plugin id="org.apache.commons.io"/>
+      <plugin id="org.apache.felix.gogo.command"/>
+      <plugin id="org.apache.felix.gogo.runtime"/>
+      <plugin id="org.apache.felix.gogo.shell"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.console"/>
+      <plugin id="org.eclipse.equinox.ds"/>
+      <plugin id="org.eclipse.equinox.http.registry"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.update.configurator"/>
+      <plugin id="org.json"/>
+   </plugins>
+
+
+</product>
