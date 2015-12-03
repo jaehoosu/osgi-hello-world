@@ -17,68 +17,45 @@
 			<artifactId>org.eclipse.equinox.servletbridge</artifactId>
 			<version>1.3.0-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>pl.pilabs.osgi-hello-world</groupId>
+			<artifactId>osgi-hello-world-51-repo-minimal</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>zip</type>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.6</version>
+					<configuration>
+						<overlays>
+							<overlay>
+								<groupId>pl.pilabs.osgi-hello-world</groupId>
+								<artifactId>osgi-hello-world-51-repo-minimal</artifactId>
+								<type>zip</type>
+								<targetPath>WEB-INF/eclipse</targetPath>
+							</overlay>
+						</overlays>
+					</configuration>
+				</plugin>
+				<plugin>
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
 					<version>9.3.6.v20151106</version>
 				</plugin>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<version>2.10</version>
-				<executions>
-					<execution>
-						<id>unpack-dependencies</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/WEB-INF/eclipse</outputDirectory>
-							<includes>plugins/*</includes>
-							<artifactItems>
-								<artivactItem>
-									<groupId>pl.pilabs.osgi-hello-world</groupId>
-									<artifactId>osgi-hello-world-51-repo-minimal</artifactId>
-									<version>0.0.1-SNAPSHOT</version>
-									<type>zip</type>
-								</artivactItem>
-							</artifactItems>
-						</configuration>
-					</execution>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>prepare-package</phase>
-						<goals>
-							<goal>copy</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>org.eclipse.equinox</groupId>
-									<artifactId>org.eclipse.equinox.http.servletbridge</artifactId>
-									<version>1.0.300-SNAPSHOT</version>
-								</artifactItem>
-								<artifactItem>
-									<groupId>org.apache.felix</groupId>
-									<artifactId>org.apache.felix.webconsole</artifactId>
-									<version>4.2.14</version>
-								</artifactItem>
-							</artifactItems>
-							<outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/WEB-INF/eclipse/plugins</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
 	</build>
 
 </project>

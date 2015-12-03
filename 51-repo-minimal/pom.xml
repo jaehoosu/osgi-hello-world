@@ -11,4 +11,38 @@
 	<artifactId>osgi-hello-world-51-repo-minimal</artifactId>
 	<packaging>eclipse-repository</packaging>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/repository/plugins</outputDirectory>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.eclipse.equinox</groupId>
+									<artifactId>org.eclipse.equinox.http.servletbridge</artifactId>
+									<version>1.0.300-SNAPSHOT</version>
+								</artifactItem>
+								<artifactItem>
+									<groupId>org.apache.felix</groupId>
+									<artifactId>org.apache.felix.webconsole</artifactId>
+									<version>4.2.14</version>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
