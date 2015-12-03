@@ -34,6 +34,11 @@
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.6</version>
 					<configuration>
+						<webResources>
+							<resource>
+								<directory>src/main/webapp-war</directory>
+							</resource>
+						</webResources>
 						<overlays>
 							<overlay>
 								<groupId>pl.pilabs.osgi-hello-world</groupId>
@@ -48,17 +53,43 @@
 					<groupId>org.eclipse.jetty</groupId>
 					<artifactId>jetty-maven-plugin</artifactId>
 					<version>9.3.6.v20151106</version>
-					<configuration>
-						<webAppSourceDirectory>src/main/webapp</webAppSourceDirectory>
-					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
 					<artifactId>tomcat7-maven-plugin</artifactId>
 					<version>2.2</version>
+					<configuration>
+						<path>/</path>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>copy</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/${project.artifactId}-${project.version}/WEB-INF/eclipse/plugins</outputDirectory>
+							<artifactItems>
+								<artifactItem>
+									<groupId>pl.pilabs.osgi-hello-world</groupId>
+									<artifactId>osgi-hello-world-06-servlet</artifactId>
+									<version>0.0.1-SNAPSHOT</version>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>
