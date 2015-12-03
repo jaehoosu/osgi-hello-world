@@ -20,13 +20,13 @@ import org.osgi.service.component.annotations.Component;
 import org.osgi.service.packageadmin.PackageAdmin;
 import org.osgi.util.tracker.ServiceTracker;
 
+@SuppressWarnings({ "restriction", "deprecation" })
 @Component(immediate = true)
 public class Reloader {
 
 	ServiceTracker<PackageAdmin, PackageAdmin> packageAdminTracker;
 
 	private boolean run = true;
-	private int counter;
 
 	Map<Long, FileTime> lastMod = new HashMap<>();
 
@@ -74,8 +74,7 @@ public class Reloader {
 					FileTime prevTime = lastMod.get(bundle.getBundleId());
 					if (prevTime == null || prevTime.compareTo(lm) < 0) {
 						lastMod.put(bundle.getBundleId(), lm);
-						System.out.println("Detected change in "
-								+ lmp);
+						System.out.println("Detected change in " + lmp);
 						refreshBundle(bundle);
 					}
 				}
