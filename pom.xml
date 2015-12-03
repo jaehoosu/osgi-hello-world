@@ -22,7 +22,7 @@
 		<module>06-servlet</module>
 		<module>07-servlet-webconsole</module>
 		<module>51-repo-minimal</module>
-		<module>51-war-minimal</module>
+		<module>52-war-minimal</module>
 		<module>99-reloader</module>
 	</modules>
 

@@ -8,7 +8,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>osgi-hello-world-51-war-minimal</artifactId>
+	<artifactId>osgi-hello-world-52-war-minimal</artifactId>
 	<packaging>war</packaging>
 
 	<dependencies>
