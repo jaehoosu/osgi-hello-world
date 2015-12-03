@@ -27,6 +27,7 @@
 	</modules>
 
 	<build>
+		<sourceDirectory>src</sourceDirectory>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -56,6 +57,13 @@
 								<version>0.0.1-SNAPSHOT</version>
 							</artifact>
 						</target>
+						<environments>
+							<environment>
+								<os>${target.os}</os>
+								<ws>${target.ws}</ws>
+								<arch>${target.arch}</arch>
+							</environment>
+						</environments>
 					</configuration>
 				</plugin>
 			</plugins>

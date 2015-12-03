@@ -45,10 +45,12 @@ public class Reloader {
 	private void refresh(BundleContext ctx) {
 		while (run) {
 			for (Bundle bundle : ctx.getBundles()) {
-				checkBundle(bundle);
+				if (bundle != ctx.getBundle()) {
+					checkBundle(bundle);
+				}
 			}
 			try {
-				Thread.sleep(100);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 			}
 		}
@@ -67,9 +69,6 @@ public class Reloader {
 						(f1, f2) -> getLM(f1).compareTo(getLM(f2)));
 				if (lastModifiedPath.isPresent()) {
 					Path lmp = lastModifiedPath.get();
-					if (lmp.endsWith("Reloader.class")) {
-						return;
-					}
 					FileTime lm = Files.getLastModifiedTime(lmp);
 					FileTime prevTime = lastMod.get(bundle.getBundleId());
 					if (prevTime == null || prevTime.compareTo(lm) < 0) {
