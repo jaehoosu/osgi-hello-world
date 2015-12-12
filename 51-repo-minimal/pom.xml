@@ -28,11 +28,6 @@
 							<outputDirectory>${project.build.directory}/repository/plugins</outputDirectory>
 							<artifactItems>
 								<artifactItem>
-									<groupId>org.eclipse.equinox</groupId>
-									<artifactId>org.eclipse.equinox.http.servletbridge</artifactId>
-									<version>1.0.300-SNAPSHOT</version>
-								</artifactItem>
-								<artifactItem>
 									<groupId>org.apache.felix</groupId>
 									<artifactId>org.apache.felix.webconsole</artifactId>
 									<version>4.2.14</version>

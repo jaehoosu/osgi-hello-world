@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.8"?><target name="osgi-hello-world-51-repo-minimal" sequenceNumber="49">
+<?pde version="3.8"?><target name="osgi-hello-world-51-repo-minimal" sequenceNumber="55">
 <locations>
-<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="com.eclipsesource.jaxrs.connector.feature.feature.group" version="5.2.0.201511150719"/>
-<repository location="http://hstaudacher.github.com/osgi-jax-rs-connector"/>
-</location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.apache.commons.fileupload.source" version="1.2.2.v20111214-1400"/>
 <unit id="org.apache.commons.io.source" version="2.2.0.v201405211200"/>
@@ -14,6 +10,11 @@
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20150519210750/repository/"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="com.eclipsesource.jaxrs.connector.feature.feature.group" version="5.2.0.201511150719"/>
+<repository location="http://hstaudacher.github.com/osgi-jax-rs-connector/5.2.1"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.equinox.serverside.sdk.feature.group" version="3.11.1.v20150828-1818"/>
 <unit id="org.eclipse.platform.sdk" version="4.5.1.M20150904-0015"/>
 <repository location="http://download.eclipse.org/releases/mars/"/>
 </location>
