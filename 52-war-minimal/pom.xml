@@ -84,6 +84,11 @@
 									<artifactId>osgi-hello-world-06-servlet</artifactId>
 									<version>0.0.1-SNAPSHOT</version>
 								</artifactItem>
+								<artifactItem>
+									<groupId>pl.pilabs.osgi-hello-world</groupId>
+									<artifactId>osgi-hello-world-08-servlet-reqcontext</artifactId>
+									<version>0.0.1-SNAPSHOT</version>
+								</artifactItem>
 							</artifactItems>
 						</configuration>
 					</execution>

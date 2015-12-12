@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>pl.pilabs.osgi-hello-world</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>osgi-hello-world-08-servlet-reqcontext</artifactId>
+	<packaging>eclipse-plugin</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-scr-plugin</artifactId>
+				<version>1.21.0</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.osgi</groupId>
+						<artifactId>org.osgi.compendium</artifactId>
+						<version>5.0.0</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.felix</groupId>
+						<artifactId>org.apache.felix.scr.ds-annotations</artifactId>
+						<version>1.2.8</version>
+					</dependency>
+					<dependency>
+						<groupId>javax.ws.rs</groupId>
+						<artifactId>javax.ws.rs-api</artifactId>
+						<version>2.0.1</version>
+					</dependency>
+					<dependency>
+						<groupId>javax.servlet</groupId>
+						<artifactId>servlet-api</artifactId>
+						<version>3.0-alpha-1</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<outputDirectory>${project.basedir}</outputDirectory>
+					<supportedProjectTypes>
+						<supportedProjectType>eclipse-plugin</supportedProjectType>
+					</supportedProjectTypes>
+				</configuration>
+				<executions>
+					<execution>
+						<id>generate-scr-descriptor</id>
+						<goals>
+							<goal>scr</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
