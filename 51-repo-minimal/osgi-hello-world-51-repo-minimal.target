@@ -22,9 +22,9 @@
 <includeBundles>
 <plugin id="com.eclipsesource.jaxrs.jersey-all" version="2.22.1"/>
 <plugin id="com.eclipsesource.jaxrs.jersey-all.source" version="2.22.1"/>
-<plugin id="com.eclipsesource.jaxrs.jersey-all.source" version="2.22.1"/>
 <plugin id="com.eclipsesource.jaxrs.publisher"/>
 <plugin id="com.eclipsesource.jaxrs.publisher.source"/>
+<plugin id="javax.servlet" version="3.1.0.v201410161800"/>
 <plugin id="javax.servlet.source" version="3.1.0.v201410161800"/>
 <plugin id="org.apache.commons.fileupload"/>
 <plugin id="org.apache.commons.fileupload.source"/>
@@ -49,8 +49,6 @@
 <plugin id="org.eclipse.osgi" version="3.10.101.v20150820-1432"/>
 <plugin id="org.eclipse.osgi.services" version="3.5.0.v20150519-2006"/>
 <plugin id="org.eclipse.osgi.services.source" version="3.5.0.v20150519-2006"/>
-<plugin id="org.eclipse.osgi.services.source" version="3.5.0.v20150519-2006"/>
-<plugin id="org.eclipse.osgi.source" version="3.10.101.v20150820-1432"/>
 <plugin id="org.eclipse.osgi.source" version="3.10.101.v20150820-1432"/>
 <plugin id="org.eclipse.update.configurator"/>
 <plugin id="org.eclipse.update.configurator.source"/>
