@@ -12,6 +12,5 @@ Import-Package: javax.servlet;version="3.1.0",
  org.osgi.service.http;version="1.2.1",
  org.osgi.util.tracker;version="1.5.1"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Service-Component: OSGI-INF/*.xml
 Bundle-ActivationPolicy: lazy
 Bundle-Activator: pl.pilabs.servlet.app.Activator
