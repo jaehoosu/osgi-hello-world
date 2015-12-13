@@ -24,6 +24,7 @@
 		<module>08-servlet-reqcontext</module>
 		<module>09-servlet-app</module>
 		<module>11-servlet-app-ds</module>
+		<module>12-servlet-app-ds-annotations</module>
 		<module>51-repo-minimal</module>
 		<module>52-war-minimal</module>
 		<module>99-reloader</module>

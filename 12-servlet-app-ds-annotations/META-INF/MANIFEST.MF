@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: osgi-hello-world-12-servlet-app-ds-annotations
+Bundle-Version: 0.0.1.qualifier
+Import-Package: javax.servlet;version="3.1.0",
+ javax.ws.rs;version="2.0.0",
+ javax.ws.rs.core;version="2.0.0",
+ org.glassfish.jersey.servlet;version="2.22.1",
+ org.osgi.framework;version="1.8.0",
+ org.osgi.service.component.annotations;version="1.2.0",
+ org.osgi.service.event;version="1.3.1",
+ org.osgi.service.http;version="1.2.1",
+ org.osgi.util.tracker;version="1.5.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: pl.pilabs.servlet.app.Activator
+Service-Component: OSGI-INF/*.xml
