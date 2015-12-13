@@ -25,12 +25,14 @@
 		<module>09-servlet-app</module>
 		<module>11-servlet-app-ds</module>
 		<module>12-servlet-app-ds-annotations</module>
+		<module>13-servlet-app-scr-annotations</module>
 		<module>14-servlet-guice</module>
 		<module>15-servlet-guice-peaberry</module>
 		<module>16-servlet-guice-peaberry-module</module>
 		<module>51-repo-minimal</module>
 		<module>52-war-minimal</module>
 		<module>99-reloader</module>
+		<module>libs</module>
 	</modules>
 
 	<build>
@@ -56,7 +58,6 @@
 					<artifactId>target-platform-configuration</artifactId>
 					<version>${tycho-version}</version>
 					<configuration>
-						<pomDependencies>consider</pomDependencies>
 						<target>
 							<artifact>
 								<groupId>pl.pilabs.osgi-hello-world</groupId>
@@ -75,13 +76,26 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		<plugins>
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<extensions>true</extensions>
-			</plugin>
-		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>bundle</id>
+			<activation>
+				<file>
+					<exists>build.properties</exists>
+				</file>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-maven-plugin</artifactId>
+						<extensions>true</extensions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 
 </project>

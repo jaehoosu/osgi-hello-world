@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?><target name="osgi-hello-world-13-app-scr-annotations" sequenceNumber="48">
+<locations>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="com.eclipsesource.jaxrs.connector.feature.feature.group" version="5.2.0.201511150719"/>
+<repository location="http://hstaudacher.github.com/osgi-jax-rs-connector"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.equinox.server.jetty.feature.group" version="1.2.1.v20150828-1818"/>
+<unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.11.1.v20150831-1342"/>
+<repository location="http://download.eclipse.org/releases/mars/"/>
+</location>
+<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.apache.felix.org.apache.felix.scr.annotations" version="1.9.12"/>
+<repository location="http://localhost:9999/site"/>
+</location>
+</locations>
+<includeBundles>
+<plugin id="com.eclipsesource.jaxrs.jersey-all" version="2.22.1"/>
+<plugin id="com.eclipsesource.jaxrs.jersey-all.source" version="2.22.1"/>
+<plugin id="com.eclipsesource.jaxrs.publisher"/>
+<plugin id="com.eclipsesource.jaxrs.publisher.source"/>
+<plugin id="javax.servlet" version="3.1.0.v201410161800"/>
+<plugin id="org.apache.felix.gogo.command" version="0.10.0.v201209301215"/>
+<plugin id="org.apache.felix.gogo.command.source" version="0.10.0.v201209301215"/>
+<plugin id="org.apache.felix.gogo.runtime" version="0.10.0.v201209301036"/>
+<plugin id="org.apache.felix.gogo.runtime.source" version="0.10.0.v201209301036"/>
+<plugin id="org.apache.felix.gogo.shell"/>
+<plugin id="org.apache.felix.gogo.shell.source"/>
+<plugin id="org.apache.felix.org.apache.felix.scr.annotations"/>
+<plugin id="org.eclipse.equinox.console"/>
+<plugin id="org.eclipse.equinox.console.source"/>
+<plugin id="org.eclipse.equinox.ds"/>
+<plugin id="org.eclipse.equinox.ds.source"/>
+<plugin id="org.eclipse.equinox.http.jetty"/>
+<plugin id="org.eclipse.equinox.http.jetty.source"/>
+<plugin id="org.eclipse.equinox.http.servlet"/>
+<plugin id="org.eclipse.equinox.http.servlet.source"/>
+<plugin id="org.eclipse.equinox.util"/>
+<plugin id="org.eclipse.equinox.util.source"/>
+<plugin id="org.eclipse.jetty.http"/>
+<plugin id="org.eclipse.jetty.http.source"/>
+<plugin id="org.eclipse.jetty.io"/>
+<plugin id="org.eclipse.jetty.io.source"/>
+<plugin id="org.eclipse.jetty.security"/>
+<plugin id="org.eclipse.jetty.security.source"/>
+<plugin id="org.eclipse.jetty.server"/>
+<plugin id="org.eclipse.jetty.server.source"/>
+<plugin id="org.eclipse.jetty.servlet"/>
+<plugin id="org.eclipse.jetty.servlet.source"/>
+<plugin id="org.eclipse.jetty.util"/>
+<plugin id="org.eclipse.jetty.util.source"/>
+<plugin id="org.eclipse.osgi" version="3.10.101.v20150820-1432"/>
+<plugin id="org.eclipse.osgi.services" version="3.5.0.v20150519-2006"/>
+<plugin id="org.eclipse.osgi.services.source" version="3.5.0.v20150519-2006"/>
+<plugin id="org.eclipse.osgi.source" version="3.10.101.v20150820-1432"/>
+</includeBundles>
+</target>
