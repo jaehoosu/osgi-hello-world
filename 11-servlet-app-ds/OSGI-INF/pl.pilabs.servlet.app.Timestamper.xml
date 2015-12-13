@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0" name="pl.pilabs.servlet.app.Timestamper">
+    <implementation class="pl.pilabs.servlet.app.TimestamperImpl"/>
+    <service>
+        <provide interface="pl.pilabs.servlet.app.Timestamper"/>
+    </service>
+</scr:component>
