@@ -9,11 +9,11 @@ The following examples are included:
 
 ## Console-based
 
-- 01 - absolutely minimal dependencies
-- 02 - minimal, but with working unit tests
-- 03 - as above, but with gogo console
-- 04 - as Declarative Service (DS)
-- 05 - as Declarative Service, using Java annotations to generate service descriptor via SCR plugin
+- 01 - absolutely minimal, single file, with only OSGi framework as dependency
+- 02 - as above, with working unit tests
+- 03 - as above, with gogo console
+- 04 - implemented as OSGi Declarative Service (DS)
+- 05 - Declarative Service, using Java annotations to generate service descriptor via SCR plugin
 
 ## Servlets, published using [osgi-jax-rs-connector](https://github.com/hstaudacher/osgi-jax-rs-connector)
 
@@ -25,7 +25,7 @@ The following examples are included:
 
 ## Servlets, published directly in Activator
 
-**Note:** This approach allows REST resource classes to have request life-cycle and allow injecting @QueryParams etc directly into the class. However, because the service is no longer a singleton publishet into OSGi service registry it's a bit tricky to inject other OSGi services into resource class - see examples on how this is achived, using a "trick" with static field (it's not very nice - still looking for better solution).
+**Note:** This approach allows REST resource classes to have request life-cycle and allow injecting @QueryParams etc directly into the class. However, because the service is no longer a singleton published into OSGi service registry it's a bit tricky to inject other OSGi services into resource class - see examples on how this is achived, using a "trick" with static field (it's not very nice - still looking for better solution).
 
 - 09 - simplest servlet, published in Activator
 - 11 - same as above, using Declarative Services injection
