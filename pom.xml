@@ -27,6 +27,7 @@
 		<module>12-servlet-app-ds-annotations</module>
 		<module>14-servlet-guice</module>
 		<module>15-servlet-guice-peaberry</module>
+		<module>16-servlet-guice-peaberry-module</module>
 		<module>51-repo-minimal</module>
 		<module>52-war-minimal</module>
 		<module>99-reloader</module>
