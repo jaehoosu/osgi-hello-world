@@ -9,7 +9,6 @@ import java.util.logging.Logger;
 import javax.servlet.ServletException;
 
 import org.glassfish.jersey.servlet.ServletContainer;
-import org.ops4j.peaberry.Export;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -19,17 +18,12 @@ import org.osgi.service.http.HttpService;
 import org.osgi.service.http.NamespaceException;
 import org.osgi.util.tracker.ServiceTracker;
 
-import com.google.inject.Inject;
-
 public class Activator implements BundleActivator {
 
   private BundleContext bc;
   private ServiceTracker<HttpService, HttpService> tracker;
   private HttpService httpService = null;
   private static final Logger logger = Logger.getLogger(Activator.class.getName());
-
-  @Inject
-  Export<Timestamper> exportedTimestamper;
 
   @Override
   public synchronized void start(BundleContext bundleContext) throws Exception {
