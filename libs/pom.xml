@@ -32,6 +32,12 @@
 								<artifact>
 									<id>org.ops4j.peaberry.extensions:peaberry.activation:1.3</id>
 								</artifact>
+								<artifact>
+									<id>org.glassfish.jersey.core:jersey-server:2.22.1</id>
+								</artifact>
+								<artifact>
+									<id>org.glassfish.jersey.containers:jersey-container-servlet:2.22.1</id>
+								</artifact>
 							</artifacts>
 						</configuration>
 					</execution>
@@ -48,7 +54,7 @@
 					</httpConnector>
 					<webAppSourceDirectory>${basedir}/target/repository/</webAppSourceDirectory>
 					<webApp>
-						<contextPath>/site/3</contextPath>
+						<contextPath>/site/5</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
